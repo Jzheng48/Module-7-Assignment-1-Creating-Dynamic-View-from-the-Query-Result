@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JSON Data Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <h1>JSON Data Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i=0; i<data.length; i++) { %>
+        <tr>
+          <td><%= data[i].name %></td>
+          <td><%= data[i].age %></td>
+          <td><%= data[i].gender %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
